@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="ContractNo">
+          <DataField>ContractNo</DataField>
+        </Field>
+        <Field Name="SuperviseNo">
+          <DataField>SuperviseNo</DataField>
+        </Field>
+        <Field Name="CemeteryCode">
+          <DataField>CemeteryCode</DataField>
+        </Field>
+        <Field Name="CemeteryNo">
+          <DataField>CemeteryNo</DataField>
+        </Field>
+        <Field Name="ContractDate">
+          <DataField>ContractDate</DataField>
+        </Field>
+        <Field Name="ComInfor_Name">
+          <DataField>ComInfor_Name</DataField>
+        </Field>
+        <Field Name="ComInfor_Address">
+          <DataField>ComInfor_Address</DataField>
+        </Field>
+        <Field Name="ComInfor_PostCode">
+          <DataField>ComInfor_PostCode</DataField>
+        </Field>
+        <Field Name="ComInfor_PhoneNo">
+          <DataField>ComInfor_PhoneNo</DataField>
+        </Field>
+        <Field Name="WorkDate_Year">
+          <DataField>WorkDate_Year</DataField>
+        </Field>
+        <Field Name="WorkDate_Month">
+          <DataField>WorkDate_Month</DataField>
+        </Field>
+        <Field Name="WorkDate_Day">
+          <DataField>WorkDate_Day</DataField>
+        </Field>
+        <Field Name="MainCustomerName">
+          <DataField>MainCustomerName</DataField>
+        </Field>
+        <Field Name="CustAddress">
+          <DataField>CustAddress</DataField>
+        </Field>
+        <Field Name="CustPhoneNo">
+          <DataField>CustPhoneNo</DataField>
+        </Field>
+        <Field Name="EmpName">
+          <DataField>EmpName</DataField>
+        </Field>
+        <Field Name="DeptName">
+          <DataField>DeptName</DataField>
+        </Field>
+        <Field Name="EmpMobileNo">
+          <DataField>EmpMobileNo</DataField>
+        </Field>
+        <Field Name="EmpJobTitle">
+          <DataField>EmpJobTitle</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

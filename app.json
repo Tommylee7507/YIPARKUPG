@@ -1,0 +1,28 @@
+{
+  "id": "142d226f-22a6-4169-a84d-65a70a0e35eb",
+  "name": "BC-UPG",
+  "publisher": "Pankaj",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 79999
+    }
+  ],
+  "showMyCode": false,
+  "runtime": "3.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
